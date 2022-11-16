@@ -1,5 +1,4 @@
 package solution;
-
 import java.io.*;
 import java.util.Scanner;
 
@@ -11,7 +10,6 @@ class Reader {
         FileWriter outs = null;
         BufferedReader reader;
         FileOutputStream outputstream = null;
-
 
         Scanner myObj = new Scanner(System.in);
         try {
@@ -40,7 +38,8 @@ class Reader {
             System.out.println("Uppercase not allowed");
         } catch (IOException e) {
             e.printStackTrace();
-        } catch (MyException b) {
+        }
+        catch (MyException b) {
             System.out.println(b);
         }
     }
