@@ -23,7 +23,9 @@ class Reader {
             String line = reader.readLine();
             String word = myObj.nextLine();
             System.out.println("Word is: " + word);
-            if (word.matches(".*\\d.*")) {throw new MyException("Numbers are not allowed");}
+            if (word.matches(".*\\d.*")) {
+                throw new MyException("Numbers are not allowed");
+            }
             while (line != null) {
                 Solution rjesenje = new Solution();
                 //read next line
@@ -34,13 +36,11 @@ class Reader {
                 line = reader.readLine();
             }
             reader.close();
-        }
-        catch (ArrayIndexOutOfBoundsException arrayIndexOutOfBoundsException) {
-            System.out.println("Uppercase not allowed");}
-        catch (IOException e) {
+        } catch (ArrayIndexOutOfBoundsException arrayIndexOutOfBoundsException) {
+            System.out.println("Uppercase not allowed");
+        } catch (IOException e) {
             e.printStackTrace();
-        }
-        catch (MyException b){
+        } catch (MyException b) {
             System.out.println(b);
         }
     }
