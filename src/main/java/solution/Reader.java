@@ -2,28 +2,24 @@ package solution;
 import java.io.*;
 import java.util.Scanner;
 
-class Reader {
+public class Reader {
     public void reader() {
         int i = 0;
         int j = 0;
-        File outf = new File("C:\\Users\\ejubm\\Desktop\\Java_Week1_Ejub\\src\\solution\\solution.txt");
         FileWriter outs = null;
         BufferedReader reader;
-        FileOutputStream outputstream = null;
 
-        Scanner myObj = new Scanner(System.in);
+        Scanner myObj = new Scanner(System.in); //koristim da bi od usera primio input, kreiram kao neki skener
         try {
             reader = new BufferedReader(new FileReader(
-                    "C:\\Users\\ejubm\\Desktop\\Java_Week1_Ejub\\src\\solution\\text.txt"));
+                    "C:\\Users\\ejubm\\Desktop\\Java_Week1_Ejub\\src\\main\\java\\solution\\text.txt"));
 
-            File outputfile = new File("C:\\Users\\ejubm\\Desktop\\Java_Week1_Ejub\\src\\solution\\solution.txt");
-            outputstream = new FileOutputStream(outputfile);
+            File outputfile = new File("C:\\Users\\ejubm\\Desktop\\Java_Week1_Ejub\\src\\main\\java\\solution\\solution.txt");
+            FileOutputStream outputstream = new FileOutputStream(outputfile);
             String line = reader.readLine();
             String word = myObj.nextLine();
             System.out.println("Word is: " + word);
-            if (word.matches(".*\\d.*")) {
-                throw new MyException("Numbers are not allowed");
-            }
+            checkWord(word);
             while (line != null) {
                 Solution rjesenje = new Solution();
                 //read next line
@@ -41,6 +37,11 @@ class Reader {
         }
         catch (MyException b) {
             System.out.println(b);
+        }
+    }
+    public void checkWord(String word) throws MyException {
+        if (word.matches(".*\\d.*")) {
+            throw new MyException("Numbers are not allowed");
         }
     }
 }

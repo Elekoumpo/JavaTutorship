@@ -3,13 +3,10 @@ package solution;
 public class MyException extends Exception {
     String message;
 
-    MyException(String str) {
+    public MyException(String str) {
         message = str;
     }
 
-    public String toString() {
-        return ("Custom Exception Occurred : " + message);
-    }
 }
 
 

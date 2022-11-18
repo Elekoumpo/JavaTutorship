@@ -1,0 +1,4 @@
+Number of moves for the word number 1 is: 1
+Number of moves for the word number 2 is: 0
+Number of moves for the word number 3 is: 1
+Number of moves for the word number 4 is: 2
