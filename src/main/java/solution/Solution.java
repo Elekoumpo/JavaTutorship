@@ -38,8 +38,10 @@ public class Solution {
                         break;
                     }
                 }
-                if (i == 25) {count++;
-                log.info("Count is now: ", count);}
+                if (i == 25) {
+                    count++;
+                    log.info("Count is now: ", count);
+                }
             }
 
         }

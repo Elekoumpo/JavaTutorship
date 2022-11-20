@@ -1,11 +1,13 @@
 package solution;
+
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.*;
 import java.util.Scanner;
+
 @Slf4j
 public class Reader {
-    public void reader(String fileToRead,String fileToWrite) {
+    public void reader(String fileToRead, String fileToWrite) {
         int i = 0;
         int j = 0;
         FileWriter outs = null;
@@ -27,7 +29,7 @@ public class Reader {
                 Solution rjesenje = new Solution();
                 //read next line
                 i = rjesenje.solution(line, word);
-                log.info("Solution for the word ", j ," is: ", i);
+                log.info("Solution for the word ", j, " is: ", i);
                 j++;
                 outstretch.write(("Number of moves for the word number " + j + " is: " + i + "\n").getBytes()); //upisivanje broja poteza u fajl
 
@@ -35,14 +37,14 @@ public class Reader {
             }
             reader.close();
         } catch (ArrayIndexOutOfBoundsException arrayIndexOutOfBoundsException) {
-            System.out.println("Uppercase not allowed");
+            log.error("Uppercase not allowed");
         } catch (IOException e) {
             e.printStackTrace();
-        }
-        catch (MyException b) {
-            System.out.println(b);
+        } catch (MyException b) {
+            log.error(b.message);
         }
     }
+
     public void checkWord(String word) throws MyException {
         if (word.matches(".*\\d.*")) {
             throw new MyException("Numbers are not allowed");
