@@ -1,31 +1,35 @@
 package solution;
+import lombok.extern.slf4j.Slf4j;
+
 import java.io.*;
 import java.util.Scanner;
-
+@Slf4j
 public class Reader {
-    public void reader() {
+    public void reader(String fileToRead,String fileToWrite) {
         int i = 0;
         int j = 0;
         FileWriter outs = null;
         BufferedReader reader;
 
         Scanner myObj = new Scanner(System.in); //koristim da bi od usera primio input, kreiram kao neki skener
+        log.info("Scanner created");
         try {
             reader = new BufferedReader(new FileReader(
-                    "C:\\Users\\ejubm\\Desktop\\Java_Week1_Ejub\\src\\main\\java\\solution\\text.txt"));
+                    fileToRead));
 
-            File outputfile = new File("C:\\Users\\ejubm\\Desktop\\Java_Week1_Ejub\\src\\main\\java\\solution\\solution.txt");
-            FileOutputStream outputstream = new FileOutputStream(outputfile);
+            File outfile = new File(fileToWrite);
+            FileOutputStream outstretch = new FileOutputStream(outfile);
             String line = reader.readLine();
             String word = myObj.nextLine();
-            System.out.println("Word is: " + word);
+            log.info("Word is: " + word);
             checkWord(word);
             while (line != null) {
                 Solution rjesenje = new Solution();
                 //read next line
                 i = rjesenje.solution(line, word);
+                log.info("Solution for the word ", j ," is: ", i);
                 j++;
-                outputstream.write(("Number of moves for the word number " + j + " is: " + i + "\n").getBytes());
+                outstretch.write(("Number of moves for the word number " + j + " is: " + i + "\n").getBytes()); //upisivanje broja poteza u fajl
 
                 line = reader.readLine();
             }

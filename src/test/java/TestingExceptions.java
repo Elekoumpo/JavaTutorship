@@ -36,7 +36,15 @@ public class TestingExceptions {
             String input = "ballbalbalbalba";
             int result = solution.solution(input, word);
             assertEquals(2,result);
-
-
     }
+  //  @Test
+   // void TestException4() {
+      //  assertThrows(ArrayIndexOutOfBoundsException.class, () -> {
+       //     Solution solution = new Solution();
+       //     String word = "ball";
+       //     String input = "ballbalBALbalba";
+       //     solution.solution(word, input);
+
+      //  });
+ //   }
 }

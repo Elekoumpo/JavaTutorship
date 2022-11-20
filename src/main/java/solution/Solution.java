@@ -2,6 +2,7 @@ package solution;
 
 import lombok.extern.slf4j.Slf4j;
 
+
 @Slf4j
 public class Solution {
     public int solution(String inputtext, String inputword) {
@@ -37,8 +38,8 @@ public class Solution {
                         break;
                     }
                 }
-                if (i == 25) count++;
-
+                if (i == 25) {count++;
+                log.info("Count is now: ", count);}
             }
 
         }
