@@ -1,14 +1,18 @@
 import static junit.framework.Assert.assertEquals;
+
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.jupiter.api.Test;
 import solution.Solution;
+
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
+
 @Slf4j
 public class TestingSolution {
     Solution mySolution = new Solution();
+
     @Before
     public void setup() {
         mySolution = mock(Solution.class);

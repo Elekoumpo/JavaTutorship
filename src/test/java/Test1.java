@@ -15,6 +15,6 @@ public class Test1 {
         int underTest = solution.solution(word, line);
 
         // then
-        Assertions.assertEquals(4, underTest );
+        Assertions.assertEquals(4, underTest);
     }
 }

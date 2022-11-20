@@ -31,20 +31,20 @@ public class TestingExceptions {
 
     @Test
     void TestException3() {
-            Solution solution = new Solution();
-            String word = "ball";
-            String input = "ballbalbalbalba";
-            int result = solution.solution(input, word);
-            assertEquals(2,result);
+        Solution solution = new Solution();
+        String word = "ball";
+        String input = "ballbalbalbalba";
+        int result = solution.solution(input, word);
+        assertEquals(2, result);
     }
-  //  @Test
-   // void TestException4() {
-      //  assertThrows(ArrayIndexOutOfBoundsException.class, () -> {
-       //     Solution solution = new Solution();
-       //     String word = "ball";
-       //     String input = "ballbalBALbalba";
-       //     solution.solution(word, input);
+    //  @Test
+    // void TestException4() {
+    //  assertThrows(ArrayIndexOutOfBoundsException.class, () -> {
+    //     Solution solution = new Solution();
+    //     String word = "ball";
+    //     String input = "ballbalBALbalba";
+    //     solution.solution(word, input);
 
-      //  });
- //   }
+    //  });
+    //   }
 }
