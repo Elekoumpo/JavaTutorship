@@ -1,4 +1,4 @@
-the word ball can be found 1 times in the string at line 2
-the word ball can be found 0 times in the string at line 3
-the word ball can be found 1 times in the string at line 4
-the word ball can be found 2 times in the string at line 5
+Number of moves for the word number 1 is: 1
+Number of moves for the word number 2 is: 0
+Number of moves for the word number 3 is: 1
+Number of moves for the word number 4 is: 2
