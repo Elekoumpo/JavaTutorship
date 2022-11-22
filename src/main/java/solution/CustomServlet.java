@@ -25,7 +25,7 @@ public class CustomServlet extends HttpServlet {
         System.out.println("Testing for word: " + word);
         String line = reader.readLine();
 
-        out.println("The word " + word + " is repeated: \n");
+        out.println("The word " + word + " is repeated: <br>");
         while (line != null) {
             String text = "In " + line + " " + solution.solution(line, word) + " times. <br>";
             PrintWriter out1 =  response.getWriter();
