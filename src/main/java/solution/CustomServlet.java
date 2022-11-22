@@ -19,6 +19,7 @@ public class CustomServlet extends HttpServlet {
         PrintWriter out = response.getWriter();
         BufferedReader reader;
         reader = new BufferedReader(new FileReader("C:\\Users\\ejubm\\Desktop\\Java_Week1_Ejub\\src\\main\\java\\solution\\text.txt"));
+        //line above has absolute path, that is bad because it won't work on every machine, relative path gives 500 internal server error
         String word = request.getParameter("word");
         request.getParameter(word);
         Solution solution = new Solution();
